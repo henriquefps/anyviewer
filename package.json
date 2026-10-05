@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Document previewer that runs in the browser: images, PDF, Excel/CSV, Word, ZIP, text and code, Markdown, HTML, audio and video. One script, libraries loaded on demand, OutSystems-ready.",
+  "homepage": "https://anyviewer.hfps.dev",
   "license": "MIT",
   "author": "Henrique Silva (Axians Low Code)",
   "main": "dist/anyviewer.js",
