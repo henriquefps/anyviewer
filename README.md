@@ -1,8 +1,10 @@
+<img src="docs/img/icon.svg" alt="" width="96" height="96">
+
 # AnyViewer
 
 A **document previewer that runs in the browser**: images, PDF, Excel and CSV, Word, ZIP archives, text and code, Markdown, HTML, audio and video. One script, libraries loaded only when a file type needs them, a small options-in / events-out API, and ready to use as an **OutSystems** block.
 
-**Demo: run `npm run serve` and open <http://localhost:8765/demo/>.** It has seventeen sample files, English and Portuguese, an event log, and you can drop your own file on it.
+**Live demo: <https://anyviewer.hfps.dev>.** It has seventeen sample files, English and Portuguese, an event log, and you can drop your own file on it. `npm run serve` runs it locally at <http://localhost:8765/demo/>.
 
 <p align="center">
   <img src="docs/img/pdf.png" alt="A PDF report in the demo" width="640">
@@ -83,7 +85,7 @@ The end-to-end test and the sample generator use your installed Chrome through `
 
 Layout: `src/` (the core), `dist/` (what ships, made by `scripts/build.mjs`), `demo/` (the showcase and its samples), `tests/`, `assets/` (icon and OutSystems block preview), `docs/`.
 
-`npm run deploy` publishes the demo as a Cloudflare Worker with static assets (see [`wrangler.jsonc`](wrangler.jsonc)).
+`npm run deploy` publishes the demo as a Cloudflare Worker with static assets (see [`wrangler.jsonc`](wrangler.jsonc)), live at <https://anyviewer.hfps.dev>.
 
 ## Sample files
 

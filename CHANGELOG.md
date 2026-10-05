@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Repository icon and social preview image.
+- Live demo at anyviewer.hfps.dev.
+
 ## 1.0.0 (2026-10-04)
 
 First public release of AnyViewer, the document previewer of the OutSystems `AnyViewer` library.
