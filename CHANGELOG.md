@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Repository icon and social preview image.
+- Social preview image.
 - Live demo at anyviewer.hfps.dev.
 
 ## 1.0.0 (2026-10-04)

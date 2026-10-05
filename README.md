@@ -1,4 +1,4 @@
-<img src="docs/img/icon.svg" alt="" width="96" height="96">
+<img src="assets/icon-128.png" alt="" width="96" height="96">
 
 # AnyViewer
 
