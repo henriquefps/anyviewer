@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Plant configuration (fictitious) -->
+<plant id="AC-01" name="Atlantic Ceramics - Aveiro">
+  <kilns>
+    <kiln id="1" maxTemperature="1180" fuel="natural-gas" />
+    <kiln id="2" maxTemperature="1180" fuel="natural-gas" />
+    <kiln id="3" maxTemperature="1220" fuel="hydrogen-blend" retrofitted="2026-05-30" />
+  </kilns>
+  <shifts timezone="Europe/Lisbon">
+    <shift name="morning" start="06:00" end="14:00" />
+    <shift name="afternoon" start="14:00" end="22:00" />
+  </shifts>
+  <alerts email="maintenance@example.com" temperatureDelta="45" />
+</plant>

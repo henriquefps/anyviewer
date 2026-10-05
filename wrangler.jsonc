@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "anyviewer",
+  "compatibility_date": "2026-10-01",
+  // Static demo only: site/ is assembled by `npm run site` (demo/ + dist/ + the icon + _redirects)
+  "assets": {
+    "directory": "./site"
+  },
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "anyviewer.hfps.dev", "custom_domain": true }
+  ]
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Full bleed: the viewer's accent colour fills the whole square -->
+  <rect width="1024" height="1024" fill="#1068eb"/>
+  <!-- The viewer window, inside the 40% safe circle -->
+  <rect x="215" y="236" width="594" height="552" rx="52" fill="#ffffff"/>
+  <!-- Toolbar strip (.av-bar) -->
+  <path d="M215 288 a52 52 0 0 1 52 -52 h490 a52 52 0 0 1 52 52 v80 h-594 z" fill="#e3e7ec"/>
+  <!-- File name (.av-name) and type badge (.av-badge) -->
+  <rect x="270" y="274" width="230" height="56" rx="28" fill="#212529"/>
+  <rect x="610" y="274" width="144" height="56" rx="28" fill="#1068eb"/>
+  <!-- Body: a picture... -->
+  <clipPath id="pic"><rect x="270" y="414" width="484" height="180" rx="22"/></clipPath>
+  <g clip-path="url(#pic)">
+    <rect x="270" y="414" width="484" height="180" fill="#cfe0fc"/>
+    <circle cx="680" cy="466" r="30" fill="#ffffff"/>
+    <path d="M250 610 L420 470 L500 546 L560 494 L780 610 Z" fill="#1068eb"/>
+  </g>
+  <!-- ...and lines of text, left aligned, ragged right -->
+  <rect x="270" y="630" width="484" height="60" rx="30" fill="#adb5bd"/>
+  <rect x="270" y="708" width="330" height="60" rx="30" fill="#adb5bd"/>
+</svg>

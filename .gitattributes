@@ -1,0 +1,6 @@
+# Text files keep LF everywhere
+* text=auto eol=lf
+
+# Sample files must stay byte-exact (the PDFs look like text to git)
+demo/samples/** -text
+*.pdf binary

@@ -1,0 +1,31 @@
+{
+  "name": "anyviewer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Document previewer that runs in the browser: images, PDF, Excel/CSV, Word, ZIP, text and code, Markdown, HTML, audio and video. One script, libraries loaded on demand, OutSystems-ready.",
+  "license": "MIT",
+  "author": "Henrique Silva (Axians Low Code)",
+  "main": "dist/anyviewer.js",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "samples": "node scripts/gen-samples.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "e2e": "node tests/e2e.mjs",
+    "site": "npm run build && sh scripts/build-site.sh",
+    "serve": "node scripts/serve.mjs",
+    "deploy": "npm run site && wrangler deploy",
+    "preview": "npm run site && wrangler dev"
+  },
+  "devDependencies": {
+    "@highlightjs/cdn-assets": "11.9.0",
+    "docx-preview": "0.3.5",
+    "dompurify": "3.1.6",
+    "jszip": "3.10.1",
+    "marked": "12.0.2",
+    "pdfjs-dist": "3.11.174",
+    "puppeteer-core": "^24.0.0",
+    "wrangler": "^4.141.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  }
+}

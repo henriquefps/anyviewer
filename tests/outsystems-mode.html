@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AnyViewer in OutSystems mode</title>
+<script>
+  // What an OutSystems Reactive page looks like to AnyViewer:
+  // an AMD `define` that swallows UMD modules, and a RequireJS `require` that throws
+  // for anything not loaded yet (OutSystems sends that error to its ErrorScreen).
+  window.__amdCalls = 0;
+  window.define = function () { window.__amdCalls++; };
+  window.define.amd = {};
+  window.__requireCalls = [];
+  window.require = window.requirejs = function (name) {
+    window.__requireCalls.push(String(name));
+    throw new Error("Module name " + name + " has not been loaded yet for context: _");
+  };
+</script>
+<!-- Required Scripts of the block: all of them load with the page -->
+<script src="../dist/anyviewer.js"></script>
+<script src="../dist/pdfjs.js"></script>
+<script src="../dist/pdfjsworker.js"></script>
+<script src="../dist/xlsx.js"></script>
+<script src="../dist/jszip.js"></script>
+<script src="../dist/docxpreview.js"></script>
+<script src="../dist/hljs.js"></script>
+<script src="../dist/marked.js"></script>
+<script src="../dist/purify.js"></script>
+<style>body { font-family: sans-serif; margin: 16px; }</style>
+</head>
+<body>
+<div id="viewer"></div>
+<script>
+  // Nothing may be fetched: scriptsBaseUrl points nowhere
+  window.run = async function (name) {
+    const bytes = new Uint8Array(await (await fetch("../demo/samples/" + encodeURIComponent(name))).arrayBuffer());
+    let s = "";
+    for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+    return AnyViewer.render("viewer", { base64: btoa(s), fileName: name, height: "560px", scriptsBaseUrl: "/missing/" });
+  };
+  window.globalsAtLoad = ["pdfjsLib", "XLSX", "JSZip", "docx", "hljs", "marked", "DOMPurify"].filter(g => window[g]);
+</script>
+</body>
+</html>

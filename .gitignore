@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+screenshots/
+.playwright-mcp/
+.wrangler/
+
+# Never commit OutSystems exports or anything extracted from them
+*.oml
+*.oap
+extracted/
+site/
+
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
